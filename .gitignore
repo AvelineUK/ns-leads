@@ -1,0 +1,5 @@
+.env
+.env.local
+.env*.local
+supabase/.temp
+supabase/functions/submit-lead/.env
