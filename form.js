@@ -1,9 +1,9 @@
 // ─────────────────────────────────────────
 // Form submission
-// Replace YOUR_PROJECT_REF with your Supabase project ref
 // ─────────────────────────────────────────
 
 const FUNCTION_URL = 'https://mwnmjuytoiyslhpardhr.supabase.co/functions/v1/submit-lead'
+const ANON_KEY     = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im13bm1qdXl0b2l5c2xocGFyZGhyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMxNzgyNjEsImV4cCI6MjA4ODc1NDI2MX0.MF2iEeTiPmk5y7BgGDUXiHV7CKvAM5dZPxpOj2BQBIs'
 
 document.getElementById('lead-form').addEventListener('submit', async function (e) {
   e.preventDefault()
@@ -28,8 +28,12 @@ document.getElementById('lead-form').addEventListener('submit', async function (
   try {
     const res = await fetch(FUNCTION_URL, {
       method:  'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body:    JSON.stringify(payload),
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${ANON_KEY}`,
+        'apikey': ANON_KEY,
+      },
+      body: JSON.stringify(payload),
     })
 
     const data = await res.json()
@@ -62,7 +66,6 @@ document.getElementById('lead-form').addEventListener('submit', async function (
 // Show inline message below the form
 // ─────────────────────────────────────────
 function showMessage(form, type, text) {
-  // Remove any existing message
   const existing = form.querySelector('.form-message')
   if (existing) existing.remove()
 
