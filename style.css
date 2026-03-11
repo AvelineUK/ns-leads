@@ -24,6 +24,63 @@ body {
     overflow-x: hidden;
 }
 
+/* ─────────────────────────────────────────
+   FONTS
+───────────────────────────────────────── */
+
+/* playfair-display-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/playfair-display-v40-latin-regular.woff2') format('woff2');
+}
+
+/* playfair-display-500 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/playfair-display-v40-latin-500.woff2') format('woff2');
+}
+
+/* playfair-display-600 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/playfair-display-v40-latin-600.woff2') format('woff2');
+}
+
+/* dm-sans-300 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/dm-sans-v17-latin-300.woff2') format('woff2');
+}
+
+/* dm-sans-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/dm-sans-v17-latin-regular.woff2') format('woff2');
+}
+
+/* dm-sans-500 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/dm-sans-v17-latin-500.woff2') format('woff2');
+}
 
 /* ─────────────────────────────────────────
    HEADER
@@ -495,7 +552,6 @@ h2 {
     margin-bottom: 56px;
 }
 
-
 /* ─────────────────────────────────────────
    HOW IT WORKS — STEPS
 ───────────────────────────────────────── */
@@ -520,9 +576,9 @@ h2 {
     font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
     font-weight: 400;
-    color: rgba(26,35,64,0.06);
+    color: rgba(26,35,64,0.4);
     line-height: 1;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     letter-spacing: -0.02em;
 }
 
@@ -620,7 +676,7 @@ h2 {
 
 .areas-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 8px;
     margin-top: 48px;
 }

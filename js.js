@@ -1,10 +1,25 @@
 // ─────────────────────────────────────────
-// Form submission
+// Somerset Home Services — main JS
 // ─────────────────────────────────────────
 
 const FUNCTION_URL = 'https://mwnmjuytoiyslhpardhr.supabase.co/functions/v1/submit-lead'
 const ANON_KEY     = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im13bm1qdXl0b2l5c2xocGFyZGhyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMxNzgyNjEsImV4cCI6MjA4ODc1NDI2MX0.MF2iEeTiPmk5y7BgGDUXiHV7CKvAM5dZPxpOj2BQBIs'
 
+// ─────────────────────────────────────────
+// FAQ accordion
+// ─────────────────────────────────────────
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item')
+    const isOpen = item.classList.contains('open')
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'))
+    if (!isOpen) item.classList.add('open')
+  })
+})
+
+// ─────────────────────────────────────────
+// Form submission
+// ─────────────────────────────────────────
 document.getElementById('lead-form').addEventListener('submit', async function (e) {
   e.preventDefault()
 

@@ -1,0 +1,5 @@
+    <svg class="logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="36" height="36" rx="6" fill="rgba(200,150,62,0.15)"/>
+      <path d="M18 6L7 14v16h8v-8h6v8h8V14L18 6z" fill="#1a2340" stroke="#c8963e" stroke-width="1.5" stroke-linejoin="round"/>
+      <circle cx="18" cy="14" r="2" fill="#c8963e"/>
+    </svg>
