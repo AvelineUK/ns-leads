@@ -3,3 +3,4 @@
 .env*.local
 supabase/.temp
 supabase/functions/submit-lead/.env
+python3 -m http.server 8000
