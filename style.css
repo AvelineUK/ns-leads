@@ -625,7 +625,7 @@ h2 {
 
 .trades-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 12px;
 }
 
@@ -664,9 +664,8 @@ h2 {
     gap: 6px;
 }
 
-
 /* ─────────────────────────────────────────
-   AREAS  (homepage pills + nearby)
+   AREAS (homepage pills + nearby)
 ───────────────────────────────────────── */
 
 .areas-section {
@@ -1180,7 +1179,7 @@ footer {
 
 .footer-top {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 0.8fr;
     gap: 60px;
     padding-bottom: 48px;
     border-bottom: 1px solid rgba(255,255,255,0.08);
@@ -1193,7 +1192,6 @@ footer {
     font-weight: 300;
     line-height: 1.75;
     margin-top: 16px;
-    max-width: 200px;
 }
 
 .footer-col h4 {
@@ -1217,6 +1215,14 @@ footer {
 
 .footer-col a:hover { color: var(--gold-lt); }
 
+.footer-col--wide { min-width: 0; }
+
+.footer-col-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 12px;
+}
+
 .footer-bottom {
     display: flex;
     justify-content: space-between;
@@ -1226,25 +1232,40 @@ footer {
     font-weight: 300;
 }
 
+.br-desktop { display: none; }
+.br-mobile { display: none; }
+
 /* ─────────────────────────────────────────
    RESPONSIVE
 ───────────────────────────────────────── */
 
+@media (min-width: 601px) {
+    .br-desktop { display: inline; }
+}
+
 @media (max-width: 900px) {
     .hero-inner { grid-template-columns: 1fr; gap: 48px; }
-    .hero-card { max-width: 480px; }
+    .hero-card { max-width: 900px; }
     .steps { grid-template-columns: 1fr; gap: 2px; }
     .step:first-child { border-radius: 8px 8px 0 0; }
     .step:last-child  { border-radius: 0 0 8px 8px; }
     .intro-grid { grid-template-columns: 1fr; gap: 36px; }
     .intro-strip-inner { grid-template-columns: 1fr; gap: 40px; }
     .why-grid { grid-template-columns: 1fr; gap: 12px; }
-    .footer-top { grid-template-columns: 1fr 1fr; }
+    .footer-top { grid-template-columns: 1fr; gap: 36px; text-align: center; }
+    .footer-col-links { grid-template-columns: 1fr; }
+    .footer-col a { margin-bottom: 4px; }
+    .footer-brand .logo { justify-content: center; }
+    .footer-brand p { max-width: 100%; }
+    .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
     nav { display: none; }
+    .trust-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .trust-item { justify-content: center; }
+    .trades-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 600px) {
-    .footer-top { grid-template-columns: 1fr; gap: 36px; }
-    .trust-inner { gap: 24px; }
-    .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+    .trust-inner { grid-template-columns: 1fr; gap: 12px;}
+    .trades-grid { grid-template-columns: 1fr;}
+    .br-mobile { display: inline; }
 }
