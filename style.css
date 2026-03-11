@@ -1089,6 +1089,82 @@ span.area-pill {
     color: var(--gold-lt);
 }
 
+/* ─────────────────────────────────────────
+   LEGAL
+───────────────────────────────────────── */
+
+.legal-hero {
+    background: var(--navy);
+    padding: 64px 5vw 56px;
+    position: relative;
+    overflow: hidden;
+}
+.legal-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 80% at 110% 50%, rgba(200,150,62,0.07) 0%, transparent 70%);
+    pointer-events: none;
+}
+.legal-hero-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    position: relative;
+}
+.legal-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 12px;
+}
+.legal-hero p {
+    color: rgba(255,255,255,0.5);
+    font-size: 0.85rem;
+    font-weight: 300;
+}
+.legal-body {
+    padding: 64px 5vw 80px;
+}
+.legal-body-inner {
+    max-width: 760px;
+    margin: 0 auto;
+}
+.legal-body h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--navy);
+    margin: 40px 0 12px;
+}
+.legal-body h2:first-child { margin-top: 0; }
+.legal-body p {
+    font-size: 0.92rem;
+    color: #3a4560;
+    font-weight: 300;
+    line-height: 1.85;
+    margin-bottom: 14px;
+}
+.legal-body ul {
+    margin: 0 0 14px 20px;
+}
+.legal-body ul li {
+    font-size: 0.92rem;
+    color: #3a4560;
+    font-weight: 300;
+    line-height: 1.85;
+    margin-bottom: 6px;
+}
+.legal-body a {
+    color: var(--gold);
+    text-decoration: none;
+}
+.legal-body a:hover { text-decoration: underline; }
+.legal-divider {
+    border: none;
+    border-top: 1px solid rgba(26,35,64,0.08);
+    margin: 40px 0;
+}
 
 /* ─────────────────────────────────────────
    FOOTER
@@ -1100,11 +1176,11 @@ footer {
     border-top: 1px solid rgba(200,150,62,0.2);
 }
 
-.footer-inner { max-width: 1100px; margin: 0 auto; }
+.footer-inner { max-width: 1200px; margin: 0 auto; }
 
 .footer-top {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
     gap: 60px;
     padding-bottom: 48px;
     border-bottom: 1px solid rgba(255,255,255,0.08);
@@ -1117,7 +1193,7 @@ footer {
     font-weight: 300;
     line-height: 1.75;
     margin-top: 16px;
-    max-width: 300px;
+    max-width: 200px;
 }
 
 .footer-col h4 {
@@ -1149,7 +1225,6 @@ footer {
     color: rgba(255,255,255,0.3);
     font-weight: 300;
 }
-
 
 /* ─────────────────────────────────────────
    RESPONSIVE
