@@ -1012,11 +1012,11 @@ span.area-pill {
     background: var(--white);
     border: 1px solid rgba(26,35,64,0.08);
     border-radius: 6px;
-    padding: 24px 28px;
+    padding: 24px 16px;
     display: flex;
     align-items: center;
     gap: 18px;
-    border-left: 3px solid var(--gold);
+    border: 1px solid var(--gold);
 }
 
 .stat-card-icon {
@@ -1045,7 +1045,6 @@ span.area-pill {
     margin: 0;
     line-height: 1.5;
 }
-
 
 /* ─────────────────────────────────────────
    OTHER TRADES  (trade index pages)
